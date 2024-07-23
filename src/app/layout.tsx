@@ -4,11 +4,12 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import { ThemeProvider } from "@/components/ThemeProvider/Theme-provider";
 import localFont from "next/font/local";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
+import FixedSocial from "@/components/FixedSocial/FixedSocial";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "QK Portfolio",
+  title: "Quang Khải Portfolio",
   description: "Đây là portfolio của Quang Khải",
 };
 
@@ -49,8 +50,10 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <FixedSocial />
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-QKWWH911GM" />
     </html>
   );
 }

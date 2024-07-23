@@ -60,7 +60,7 @@ function MenuIcon(props: any) {
 
 const Header = (props: Props) => {
   return (
-    <header className="sticky top-0 bg-background ">
+    <header className="sticky top-0 bg-light-background dark:bg-dark-background border-b border-white border-opacity-15">
       <div className="container">
         <div className="header_content flex items-center gap-4 justify-between px-4 md:px-6  h-16">
           <div className="flex items-center gap-4 md:gap-2 lg:gap-4 ">

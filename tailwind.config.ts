@@ -19,8 +19,20 @@ const config = {
     },
     extend: {
       colors: {
-        "dark-theme-bg": "#03071e",
-        "yellow-theme": "#d00000",
+        light: {
+          primary: "#FF5733", // Màu chủ đạo
+          secondary: "#6C757D", // Màu phụ
+          background: "#FFFFFF", // Màu nền
+          accent: "#FFC107", // Màu nhấn
+          text: "#343A40", // Màu văn bản
+        },
+        dark: {
+          primary: "#17A2B8", // Màu chủ đạo
+          secondary: "#ADB5BD", // Màu phụ
+          background: "#212529", // Màu nền
+          accent: "#FD7E14", // Màu nhấn
+          text: "#E9ECEF",
+        },
       },
       keyframes: {
         "accordion-down": {

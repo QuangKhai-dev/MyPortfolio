@@ -6,6 +6,80 @@ html {
   font-family: "var(--font-calibre)", sans-serif;
 }
 
-body.dark {
-  @apply bg-dark-theme-bg text-white;
+body {
+  counter-reset: section;
+}
+
+html.light body {
+  @apply bg-light-background text-light-text;
+}
+
+html.dark body {
+  @apply bg-dark-background text-dark-text;
+}
+
+.big-heading {
+  @apply font-bold text-6xl text-light-primary dark:text-dark-primary mb-5;
+}
+
+.btn-start {
+  @apply border border-light-accent dark:border-dark-accent py-4 px-10 rounded mt-5 hover:bg-light-accent duration-300 hover:bg-opacity-10;
+}
+
+.dowload-cv {
+  @apply text-light-accent dark:text-light-accent underline ml-5;
+}
+
+.fixed-line {
+  width: 1px;
+  height: 100px;
+  @apply bg-light-secondary dark:bg-dark-secondary;
+}
+
+.title-section::before {
+  position: relative;
+  bottom: 4px;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  @apply text-light-primary dark:text-dark-primary leading-none;
+}
+
+.title-section::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -17px;
+  right: 0;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  @apply bg-light-secondary dark:bg-dark-secondary !bg-opacity-15;
+}
+
+.title-line {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 1px;
+  @apply bg-light-secondary dark:bg-dark-secondary !bg-opacity-15 flex-1;
+}
+
+.title-contact::before {
+  position: relative;
+  bottom: 4px;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  @apply text-light-primary dark:text-dark-primary leading-none;
+}
+
+section {
+  @apply py-24;
 }
