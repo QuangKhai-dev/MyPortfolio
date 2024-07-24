@@ -28,19 +28,22 @@ ENV NODE_ENV=production
 # Tạo thư mục làm việc
 WORKDIR /app
 
+# Sao chép package.json và package-lock.json để cài đặt các phụ thuộc cần thiết cho runtime
+COPY package*.json ./
+
+# Cài đặt các phụ thuộc cần thiết cho runtime
+RUN npm ci --only=production
+
 # Sao chép chỉ thư mục build từ stage 1
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package*.json ./
-
-# Cài đặt serve để chạy ứng dụng Next.js ở chế độ production
-RUN npm install -g serve
-
-# Cài đặt các phụ thuộc cần thiết cho runtime
-RUN npm ci --only=production
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/pages ./pages
+COPY --from=builder /app/components ./components
 
 # Mở cổng 3000 để ứng dụng có thể truy cập từ bên ngoài
 EXPOSE 3000
 
 # Command để khởi động ứng dụng
-CMD ["npx", "next", "start"]
+CMD ["npm", "start"]
