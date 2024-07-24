@@ -54,6 +54,7 @@ const Banner = (props: Props) => {
             width={500}
             style={{ backgroundPosition: "bottom", backgroundSize: "200%" }}
             alt="personal Image"
+            className="rounded-md"
           />
         </div>
       </div>

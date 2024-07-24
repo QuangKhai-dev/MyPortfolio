@@ -80,6 +80,13 @@ html.dark body {
   @apply text-light-primary dark:text-dark-primary leading-none;
 }
 
+.shape-image-about::before {
+  content: "";
+  bottom: -30px;
+  right: -30px;
+  @apply absolute w-full h-full border-2 rounded-md border-light-accent dark:border-dark-accent;
+}
+
 section {
   @apply py-24;
 }
