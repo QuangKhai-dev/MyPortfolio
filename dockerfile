@@ -22,4 +22,4 @@ ENV NODE_ENV=production
 EXPOSE 3003
 
 # Khởi chạy ứng dụng
-CMD ["npm", "start:prod"]
+CMD ["npm", "start"]
