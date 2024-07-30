@@ -44,4 +44,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nextjs-app:${{ github.sha }}
             docker stop nextjs-app-container || true
             docker rm nextjs-app-container || true
-            docker run -d -p 3000:3003 --name nextjs-app-container ${{ secrets.DOCKERHUB_USERNAME }}/nextjs-app:${{ github.sha }}
+            docker run -d -p 3003:3003 --name nextjs-app-container ${{ secrets.DOCKERHUB_USERNAME }}/nextjs-app:${{ github.sha }}
