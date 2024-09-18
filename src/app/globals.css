@@ -19,7 +19,16 @@ html.dark body {
 }
 
 .big-heading {
-  @apply font-bold text-6xl text-light-primary dark:text-dark-primary mb-5;
+  @apply font-bold text-6xl mb-5;
+  background: linear-gradient(
+    to right,
+    #4df8ce 0%,
+    #84a1fd 35%,
+    #e3a5ee 70%,
+    #ede6bc 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn-start {
@@ -36,7 +45,7 @@ html.dark body {
   @apply bg-light-secondary dark:bg-dark-secondary;
 }
 
-.title-section::before {
+/* .title-section::before {
   position: relative;
   bottom: 4px;
   counter-increment: section 1;
@@ -45,7 +54,7 @@ html.dark body {
   font-size: 20px;
   font-weight: 400;
   @apply text-light-primary dark:text-dark-primary leading-none;
-}
+} */
 
 .title-section::after {
   content: "";
@@ -87,6 +96,175 @@ html.dark body {
   @apply absolute w-full h-full border-2 rounded-md border-light-accent dark:border-dark-accent;
 }
 
-section {
-  @apply py-24;
+.nav_layout {
+  backdrop-filter: blur(7.5px);
+  background-color: rgba(242, 242, 242, 0.05);
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 25px 0px;
+  opacity: 1;
+}
+
+.bg_page {
+  z-index: -10;
+  background-image: url("/img_banner.svg");
+  height: 200vw;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: hidden;
+}
+
+.bg_page_dot {
+  background-image: url("/dot_banner.svg");
+  background-position: 0 0;
+  background-size: 90px;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.bg_page_shape {
+  will-change: transform;
+  transform: translate3d(0px, -35.4125%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.icon_logo_programming {
+  padding: 10px;
+  border: 5px dashed white;
+}
+
+.my_skill_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my_skill_content .first_row {
+  grid-template-columns: repeat(6, 160px);
+}
+
+.my_skill_content .second_row {
+  grid-template-columns: repeat(5, 160px);
+}
+
+.my_skill_content .thrid_row {
+  grid-template-columns: repeat(4, 160px);
+}
+
+.my_skill_content .four_row {
+  grid-template-columns: repeat(3, 160px);
+}
+
+.my_skill_content .five_row {
+  grid-template-columns: repeat(2, 160px);
+}
+
+.my_skill_item {
+  @apply flex items-center justify-center;
+}
+
+.bg_gradient {
+  background: linear-gradient(
+    to right,
+    #4df8ce 0%,
+    #84a1fd 35%,
+    #e3a5ee 70%,
+    #ede6bc 100%
+  );
+}
+
+.bg_under_list_skill {
+  transform: rotate(3deg) translateZ(0px);
+  align-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #4df8ce 0%,
+    #84a1fd 35%,
+    #e3a5ee 70%,
+    #ede6bc 100%
+  );
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 70px;
+  justify-content: center;
+  left: calc(50.16666666666669% - 105% / 2);
+  opacity: 0.6;
+  overflow: hidden;
+  padding: 20px 0 20px 2px;
+  position: absolute;
+  top: calc(48.59437751004018% - 70px / 2);
+  width: 105%;
+  z-index: 1;
+}
+
+.list_skill_animation .list_skill {
+  transform: translateX(-50%) rotate(-3deg) translateZ(0px) translate3d(0, 0, 0);
+  align-content: center;
+  align-items: center;
+
+  bottom: -20px;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  left: 50%;
+  overflow: hidden;
+  width: 150%;
+  padding: 20px 0 20px 2px;
+  position: absolute;
+  z-index: 1;
+}
+
+.list_skill_animation .list_skill ul {
+  animation: moveSlideShowX 30s linear infinite;
+}
+
+.about_me {
+  background-image: url("/bg_about_me.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.about_me::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* blur màu trắng  */
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.text_gradient {
+  background: linear-gradient(
+    to right,
+    #4df8ce 0%,
+    #84a1fd 35%,
+    #e3a5ee 70%,
+    #ede6bc 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes moveSlideShowX {
+  100% {
+    transform: translateX(-66.6666%);
+  }
 }

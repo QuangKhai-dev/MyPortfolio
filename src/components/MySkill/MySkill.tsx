@@ -4,41 +4,167 @@ import React from "react";
 type Props = {};
 
 const MySkill = (props: Props) => {
+  const arrIconSkill = [
+    {
+      src: "/icon/html.svg",
+      name: "HTML",
+    },
+    {
+      src: "/icon/css-3.svg",
+      name: "CSS",
+    },
+    {
+      src: "/icon/java-script.svg",
+      name: "JavaScript",
+    },
+    {
+      src: "/icon/typescript.svg",
+      name: "TypeScript",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=react",
+      name: "React",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=tailwind",
+      name: "Tailwind CSS",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=redux",
+      name: "Redux",
+    },
+    {
+      src: "/icon/git.svg",
+      name: "Git",
+    },
+    {
+      src: "/icon/sass.svg",
+      name: "SASS",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=nextjs",
+      name: "Next.js",
+    },
+    {
+      src: "/icon/antd.png",
+      name: "Ant Design",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=bootstrap",
+      name: "Bootstrap",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=nestjs",
+      name: "NestJS",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=docker",
+      name: "Docker",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=mysql",
+      name: "MySQL",
+    },
+    {
+      src: "/icon/typeorm.png",
+      name: "TypeORM",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=express",
+      name: "Express",
+    },
+    {
+      src: "/icon/postman.svg",
+      name: "Postman",
+    },
+    {
+      src: "https://skillicons.dev/icons?i=vite",
+      name: "Vite",
+    },
+    {
+      src: "/icon/CICD.png",
+      name: "CI/CD",
+    },
+  ];
   return (
-    <section>
+    <section className="my_skill relative bg-dark-background">
+      <img src="/bg_my_skill_1.svg" alt="" />
       <div className="container">
-        <h2 className="title-section flex items-end text-3xl max-w-max mb-5">
-          My Skill
-        </h2>
-        <div className="space-y-3">
-          <a
-            target="_blank"
-            className="block"
-            rel="noopener noreferrer nofollow"
-            href="https://camo.githubusercontent.com/5be17ed4ad297405620683b156ebe09aa1921085c7e91661ce67d8376a9eca50/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d68746d6c2c6373732c6a732c72656163742c7673636f64652c74732c7461696c77696e642c72656475782c707269736d61"
-          >
-            <img
-              width="100%"
-              src="https://camo.githubusercontent.com/5be17ed4ad297405620683b156ebe09aa1921085c7e91661ce67d8376a9eca50/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d68746d6c2c6373732c6a732c72656163742c7673636f64652c74732c7461696c77696e642c72656475782c707269736d61"
-              alt="my skill"
-              data-canonical-src="https://skillicons.dev/icons?i=html,css,js,react,vscode,ts,tailwind,redux,prisma"
-              style={{ maxWidth: "100%" }}
-            />
-          </a>
-          <a
-            target="_blank"
-            className="block"
-            rel="noopener noreferrer nofollow"
-            href="https://camo.githubusercontent.com/25e239db64d013e0463e5f5cfe28ded5875314a8f73461b5588d228f8af1cf58/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d706f73746d616e2c70732c6e6f64656a732c6e6578746a732c6e6573746a732c6d7973716c2c6769742c657870726573732c646f636b6572"
-          >
-            <img
-              width="100%"
-              src="https://camo.githubusercontent.com/25e239db64d013e0463e5f5cfe28ded5875314a8f73461b5588d228f8af1cf58/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d706f73746d616e2c70732c6e6f64656a732c6e6578746a732c6e6573746a732c6d7973716c2c6769742c657870726573732c646f636b6572"
-              alt="my skill"
-              data-canonical-src="https://skillicons.dev/icons?i=postman,ps,nodejs,nextjs,nestjs,mysql,git,express,docker"
-              style={{ maxWidth: "100%" }}
-            />
-          </a>
+        <div className="my_skill_content space-y-10 pt-20 pb-40">
+          <div className="grid first_row gap-10">
+            {arrIconSkill.slice(0, 6).map((item, index) => (
+              <div key={index} className="my_skill_item">
+                <img
+                  src={item.src}
+                  alt="html"
+                  className="icon_logo_programming h-full w-40"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="grid second_row gap-10">
+            {arrIconSkill.slice(6, 11).map((item, index) => (
+              <div key={index} className="my_skill_item">
+                <img
+                  src={item.src}
+                  alt="html"
+                  className="icon_logo_programming h-full w-40"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="grid thrid_row gap-10">
+            {arrIconSkill.slice(11, 15).map((item, index) => (
+              <div key={index} className="my_skill_item">
+                <img
+                  src={item.src}
+                  alt="html"
+                  className="icon_logo_programming h-full w-40"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="grid four_row gap-10">
+            {arrIconSkill.slice(15, 18).map((item, index) => (
+              <div key={index} className="my_skill_item">
+                <img
+                  src={item.src}
+                  alt="html"
+                  className="icon_logo_programming h-full w-40"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="grid five_row gap-10">
+            {arrIconSkill.slice(18, 20).map((item, index) => (
+              <div key={index} className="my_skill_item">
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  className="icon_logo_programming h-full w-40"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="list_skill_animation relative mb-32">
+        <div className="bg_under_list_skill"></div>
+        <div className="list_skill bg_gradient p-3">
+          <ul className="flex items-center relative z-10 space-x-20">
+            {arrIconSkill.map((item, index) => (
+              <li key={index} className="flex items-center space-x-3">
+                <img src={item.src} alt={item.name} className="w-10 h-10" />
+                <span className="text-[#333333]">{item.name}</span>
+              </li>
+            ))}
+            {arrIconSkill.map((item, index) => (
+              <li key={index} className="flex items-center space-x-3">
+                <img src={item.src} alt={item.name} className="w-10 h-10" />
+                <span className="text-[#333333]">{item.name}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

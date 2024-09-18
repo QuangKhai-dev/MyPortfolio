@@ -29,7 +29,7 @@ const config = {
         dark: {
           primary: "#17A2B8", // Màu chủ đạo
           secondary: "#ADB5BD", // Màu phụ
-          background: "#212529", // Màu nền
+          background: "#0b0e17", // Màu nền
           accent: "#FD7E14", // Màu nhấn
           text: "#E9ECEF",
         },
