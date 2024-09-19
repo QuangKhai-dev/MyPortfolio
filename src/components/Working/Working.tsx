@@ -27,7 +27,7 @@ const Working = (props: Props) => {
         <div className="working_content flex items-center justify-center">
           <div className="working_text w-1/2 pr-10">
             <h2 className="big-heading text-4xl">
-              Where I've Worked and Learn
+              Where I&apos;ve Worked and Learn
             </h2>
             <p className="text-lg">
               I started my web development journey in 2021 with 6 months of
@@ -35,11 +35,11 @@ const Working = (props: Props) => {
               completing the course, I began an internship and secured my first
               job at CyberSoft. During my time working there, my tasks primarily
               involved developing web projects related to learning for students
-              using ReactJS, maintaining and adding features to CyberSoft's
+              using ReactJS, maintaining and adding features to CyberSoft&apos;s
               landing page on the WordPress platform with HTML, CSS, and
               JavaScript. During this period, I also had the opportunity to try
               teaching and sharing my web development experience with students
-              within CyberSoft's system.
+              within CyberSoft&apos;s system.
             </p>
           </div>
           <div className="working_carousel w-1/2 flex items-center justify-center">
