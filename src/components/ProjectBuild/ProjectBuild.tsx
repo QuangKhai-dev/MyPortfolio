@@ -8,8 +8,8 @@ const ProjectBuild = (props: Props) => {
       <img src="/shape_about_me_2.svg" alt="" className="relative" />
       <div className="container">
         <div className="project_build_title text-center pt-40 mb-10">
-          <p className="sub_title">FEATURED CASE STUDIES</p>
-          <h2>My Project</h2>
+          <p className="sub_title text-sm mb-3">FEATURED PROJECT</p>
+          <h2 className="text-6xl uppercase">My Project</h2>
         </div>
         <div className="project_build_slide relative flex justify-center pb-40">
           <div className="project_build_content w-1/2">

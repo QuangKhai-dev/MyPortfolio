@@ -9,12 +9,12 @@ const AboutMe = (props: Props) => {
       <img src="/shape_about_me.svg" alt="" className="relative" />
       <div className="about_me_content py-20 relative">
         <div className="container">
-          <h2 className="title-section flex items-end text-6xl max-w-max ">
+          <h2 className="mb-10 xl:mb-0 title-section block sm:flex items-end text-4xl xl:text-6xl max-w-max">
             About me
           </h2>
-          <div className="flex items-center">
-            <div className="w-1/2 space-y-3">
-              <p className="text-xl leading-normal">
+          <div className="flex items-center flex-col-reverse sm:flex-row">
+            <div className="w-full sm:w-7/12 xl:w-1/2 pr-5 xl:pr-0 space-y-3">
+              <p className="text-sm lg:text-lg leading-normal">
                 Hello! I&rsquo;m{" "}
                 <span className="text-light-accent dark:text-dark-accent font-semibold">
                   Đỗ Quang Khải
@@ -47,8 +47,8 @@ const AboutMe = (props: Props) => {
                 technology together!
               </p>
             </div>
-            <div className="w-1/2">
-              <div className="w-3/4 ml-auto relative">
+            <div className="w-full sm:w-5/12 xl:w-1/2">
+              <div className="w-full mb-5 sm:mb-0 xl:w-3/4 ml-auto relative">
                 <Image
                   src="/aboutme.png"
                   alt="image about me"

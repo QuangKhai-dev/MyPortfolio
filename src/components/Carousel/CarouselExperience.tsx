@@ -21,7 +21,7 @@ export default function CarouselExperience() {
   }, []);
 
   return (
-    <div className="relative w-[300px] h-[400px]">
+    <div className="relative w-[150px] sm:w-[300px] h-[200px] sm:h-[400px]">
       <AnimatePresence initial={false}>
         {images.map((src, index) => {
           const offset = (index - currentIndex + images.length) % images.length;
@@ -32,7 +32,7 @@ export default function CarouselExperience() {
               initial={{ scale: 0.8, y: 100, opacity: 1 }}
               animate={{
                 scale: offset === 0 ? 1 : 0.8,
-                y: offset === 0 ? 0 : 50,
+                y: offset === 0 ? 0 : 0,
                 x: offset === 1 ? 150 : offset === images.length - 1 ? -150 : 0,
                 zIndex: offset === 0 ? 3 : 1,
                 opacity: offset === 0 ? 1 : 0.5,

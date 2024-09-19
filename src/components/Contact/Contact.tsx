@@ -8,7 +8,7 @@ const Contact = (props: Props) => {
       <img src="/shape_about_me_2.svg" alt="" className="relative" />
       <div className="container">
         <div className="py-20">
-          <ul className="text-white flex items-center justify-between">
+          <ul className="text-white grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
             <li>
               <span>Email:</span>
               <a target="_blank" href="mailto:quangkhai0901@gmail.com">

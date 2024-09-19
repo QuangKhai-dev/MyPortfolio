@@ -19,7 +19,7 @@ html.dark body {
 }
 
 .big-heading {
-  @apply font-bold text-6xl mb-5;
+  @apply font-bold text-4xl sm:text-5xl lg:text-6xl mb-5;
   background: linear-gradient(
     to right,
     #4df8ce 0%,
@@ -149,22 +149,71 @@ html.dark body {
 
 .my_skill_content .first_row {
   grid-template-columns: repeat(6, 160px);
+  @apply hidden sm:grid;
 }
 
 .my_skill_content .second_row {
   grid-template-columns: repeat(5, 160px);
+  @apply hidden sm:grid;
 }
 
 .my_skill_content .thrid_row {
   grid-template-columns: repeat(4, 160px);
+  @apply hidden sm:grid;
 }
 
 .my_skill_content .four_row {
   grid-template-columns: repeat(3, 160px);
+  @apply hidden sm:grid;
 }
 
 .my_skill_content .five_row {
   grid-template-columns: repeat(2, 160px);
+  @apply hidden sm:grid;
+}
+
+@media screen and (min-width: 640px) and (max-width: 992px) {
+  .my_skill_content .first_row {
+    grid-template-columns: repeat(6, 100px);
+  }
+
+  .my_skill_content .second_row {
+    grid-template-columns: repeat(5, 100px);
+  }
+
+  .my_skill_content .thrid_row {
+    grid-template-columns: repeat(4, 100px);
+  }
+
+  .my_skill_content .four_row {
+    grid-template-columns: repeat(3, 100px);
+  }
+
+  .my_skill_content .five_row {
+    grid-template-columns: repeat(2, 100px);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .my_skill_content .first_row {
+    grid-template-columns: repeat(6, 130px);
+  }
+
+  .my_skill_content .second_row {
+    grid-template-columns: repeat(5, 130px);
+  }
+
+  .my_skill_content .thrid_row {
+    grid-template-columns: repeat(4, 130px);
+  }
+
+  .my_skill_content .four_row {
+    grid-template-columns: repeat(3, 130px);
+  }
+
+  .my_skill_content .five_row {
+    grid-template-columns: repeat(2, 130px);
+  }
 }
 
 .my_skill_item {

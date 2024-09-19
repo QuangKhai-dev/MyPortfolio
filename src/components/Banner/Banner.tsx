@@ -5,10 +5,10 @@ type Props = {};
 
 const Banner = (props: Props) => {
   return (
-    <section className="banner relative py-20">
+    <section className="banner relative py-10  sm:py-20">
       <div className="container">
-        <div className="banner-content flex items-center gap-10">
-          <div>
+        <div className="banner-content block sm:flex items-center gap-10">
+          <div className="w-full mb-10 sm:mb-0 sm:w-7/12 lg:w-1/2">
             <div
               className="fadeup-enter-done"
               style={{ transitionDelay: "100ms" }}
@@ -49,7 +49,7 @@ const Banner = (props: Props) => {
               </a>
             </div> */}
           </div>
-          <div className="img_banner relative w-1/2">
+          <div className="img_banner relative w-full sm:w-5/12 lg:w-1/2">
             {/* <Image
               src={personalImage}
               width={500}
@@ -57,30 +57,44 @@ const Banner = (props: Props) => {
               alt="personal Image"
               className="rounded-md relative"
             /> */}
-            <Image
-              alt="wrapper_img"
-              src="/img_banner_new.svg"
-              width={800}
-              height={500}
-            />
-            <Image
-              className="absolute bottom-0 -left-10 -rotate-12"
-              alt="icon react"
-              src="/java-script.svg"
-              width={150}
-              height={150}
-            />
-            <Image
-              className="absolute bottom-0 -right-12 rotate-12"
-              alt="icon react"
-              src="/logo-react-icon.png"
-              width={150}
-              height={150}
-            />
+            <div className="w-full h-[400px] lg:h-[550px]">
+              <Image
+                alt="wrapper_img"
+                src="/img_banner_new.svg"
+                // width={800}
+                // height={500}
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+            <div className="h-20 w-20 sm:w-28 sm:h-28 lg:h-36 lg:w-36 absolute bottom-5 lg:bottom-0 sm:bottom-8 -left-5 sm:-left-10 -rotate-12">
+              <Image
+                className=""
+                alt="icon react"
+                src="/java-script.svg"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+            <div className="h-20 w-20 sm:w-28 sm:h-28 lg:h-36 lg:w-36 absolute bottom-5 lg:bottom-0 sm:bottom-8 -right-5 sm:-right-12 rotate-12">
+              <Image
+                className="absolute w-36 h-36 "
+                alt="icon react"
+                src="/logo-react-icon.png"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
-      <div className="arrow_go_down h-96 flex justify-center relative">
+      <div className="arrow_go_down h-40 sm:h-56 lg:h-96 flex justify-center relative">
         <img src="/arrow_go_down.svg" alt="" className="h-full" />
         <span className="absolute top-1/2 -translate-y-1/2 p-2 bg-[#0b0e17] text-[#4df8ce] text-xl italic">
           See my TechSkill

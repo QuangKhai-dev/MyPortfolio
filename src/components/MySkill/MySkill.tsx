@@ -90,8 +90,8 @@ const MySkill = (props: Props) => {
     <section className="my_skill relative bg-dark-background overflow-hidden">
       <img src="/bg_my_skill_1.svg" alt="" />
       <div className="container">
-        <div className="my_skill_content space-y-10 pt-20 pb-40">
-          <div className="grid first_row gap-10">
+        <div className="my_skill_content space-y-10 pt-10 sm:pt-20 sm:pb-40">
+          <div className="first_row gap-10">
             {arrIconSkill.slice(0, 6).map((item, index) => (
               <div key={index} className="my_skill_item">
                 <img
@@ -102,7 +102,7 @@ const MySkill = (props: Props) => {
               </div>
             ))}
           </div>
-          <div className="grid second_row gap-10">
+          <div className="second_row gap-10">
             {arrIconSkill.slice(6, 11).map((item, index) => (
               <div key={index} className="my_skill_item">
                 <img
@@ -113,7 +113,7 @@ const MySkill = (props: Props) => {
               </div>
             ))}
           </div>
-          <div className="grid thrid_row gap-10">
+          <div className="thrid_row gap-10">
             {arrIconSkill.slice(11, 15).map((item, index) => (
               <div key={index} className="my_skill_item">
                 <img
@@ -124,7 +124,7 @@ const MySkill = (props: Props) => {
               </div>
             ))}
           </div>
-          <div className="grid four_row gap-10">
+          <div className="four_row gap-10">
             {arrIconSkill.slice(15, 18).map((item, index) => (
               <div key={index} className="my_skill_item">
                 <img
@@ -135,8 +135,19 @@ const MySkill = (props: Props) => {
               </div>
             ))}
           </div>
-          <div className="grid five_row gap-10">
+          <div className="five_row gap-10">
             {arrIconSkill.slice(18, 20).map((item, index) => (
+              <div key={index} className="my_skill_item">
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  className="icon_logo_programming h-full w-40"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="row_mobile grid grid-cols-4 sm:hidden gap-5">
+            {arrIconSkill.slice(0, 20).map((item, index) => (
               <div key={index} className="my_skill_item">
                 <img
                   src={item.src}
@@ -148,7 +159,7 @@ const MySkill = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="list_skill_animation relative mb-32">
+      <div className="list_skill_animation relative pt-40 sm:pt-0 mb-20 sm:mb-32">
         <div className="bg_under_list_skill"></div>
         <div className="list_skill bg_gradient p-3">
           <ul className="flex items-center relative z-10 space-x-20">
