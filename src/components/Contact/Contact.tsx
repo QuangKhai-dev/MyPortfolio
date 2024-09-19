@@ -4,14 +4,39 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <section>
+    <section className="contact_me">
+      <img src="/shape_about_me_2.svg" alt="" className="relative" />
       <div className="container">
-        <div className="flex justify-center items-center gap-5">
-          <span className="title-line"></span>
-          <h2 className="title-contact text-center flex items-end text-3xl justify-center">
-            Contact Me
-          </h2>
-          <span className="title-line"></span>
+        <div className="py-20">
+          <ul className="text-white flex items-center justify-between">
+            <li>
+              <span>Email:</span>
+              <a target="_blank" href="mailto:quangkhai0901@gmail.com">
+                Quangkhai0901@gmail.com
+              </a>
+            </li>
+            <li>
+              <span>Phone:</span>
+              <a target="_blank" href="tel:0823858955">
+                0823858955
+              </a>
+            </li>
+            <li>
+              <span>Github:</span>
+              <a target="_blank" href="https://github.com/QuangKhai-dev">
+                QuangKhaiDev
+              </a>
+            </li>
+            <li>
+              <span>Linkedin:</span>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/quangkhaidev/"
+              >
+                Quang Khải Dev
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

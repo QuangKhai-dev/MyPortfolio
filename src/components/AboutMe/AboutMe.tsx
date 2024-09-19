@@ -66,6 +66,7 @@ const AboutMe = (props: Props) => {
           </div>
         </div>
       </div>
+      <img src="/shape_about_me_2.svg" alt="" className="relative" />
     </section>
   );
 };

@@ -20,9 +20,9 @@ export default function Home() {
         <Banner />
         <MySkill />
         <AboutMe />
-        {/* <Working />
+        <Working />
         <ProjectBuild />
-        <Contact /> */}
+        <Contact />
       </main>
     </>
   );

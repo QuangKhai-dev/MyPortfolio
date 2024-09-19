@@ -87,7 +87,7 @@ const MySkill = (props: Props) => {
     },
   ];
   return (
-    <section className="my_skill relative bg-dark-background">
+    <section className="my_skill relative bg-dark-background overflow-hidden">
       <img src="/bg_my_skill_1.svg" alt="" />
       <div className="container">
         <div className="my_skill_content space-y-10 pt-20 pb-40">
