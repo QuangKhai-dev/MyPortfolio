@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark mdl-js">
       <body className={`${calibreFont.variable}`}>
         <ThemeProvider
           attribute="class"
