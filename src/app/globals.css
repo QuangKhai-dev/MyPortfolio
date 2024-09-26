@@ -445,8 +445,34 @@ html.dark body {
   width: 100%;
 }
 
+.line_sticky_data {
+  @apply relative;
+}
+
+.line_sticky_data::after {
+  content: "";
+  @apply absolute top-1/2 -translate-y-1/2 -right-12 w-10 h-0.5 bg-blue-500;
+}
+
+.upToDownAnimation {
+  animation: upToDown 0.3s forwards;
+}
+
 @keyframes moveSlideShowX {
   100% {
     transform: translateX(-66.6666%);
+  }
+}
+
+@keyframes upToDown {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
   }
 }
