@@ -1,6 +1,7 @@
 import React from "react";
 import personalImage from "./../../assets/img/imageBanner.jpg";
 import Image from "next/image";
+
 type Props = {};
 
 const Banner = (props: Props) => {
@@ -13,27 +14,34 @@ const Banner = (props: Props) => {
               className="fadeup-enter-done"
               style={{ transitionDelay: "100ms" }}
             >
-              <h1 className="text-light-secondary dark:text-white font-medium mb-5 text-2xl">
+              <h1 className="text-light-secondary dark:text-white font-medium mb-5 text-2xl animate__animated animate__backInLeft animate__fast">
                 Hi, my name is
               </h1>
             </div>
             <div
-              className="fadeup-enter-done title_name relative"
+              className="fadeup-enter-done title_name relative "
               style={{ transitionDelay: "200ms" }}
             >
-              <h2 className="big-heading relative">Đỗ Quang Khải.</h2>
+              <h2 className="big-heading relative animate__animated animate__backInLeft animate__slow">
+                Đỗ Quang Khải.
+              </h2>
             </div>
             <div
               className="fadeup-enter-done"
               style={{ transitionDelay: "300ms" }}
             >
-              <h3 className="big-heading">I build things for the web.</h3>
+              <h3 className="big-heading animate__animated animate__backInLeft animate__slow">
+                I build things for the web.
+              </h3>
             </div>
             <div
               className="fadeup-enter-done"
               style={{ transitionDelay: "400ms" }}
             >
-              <p className="text-xl" style={{ maxWidth: "540px" }}>
+              <p
+                className="text-xl animate__slower animate__animated animate__backInLeft"
+                style={{ maxWidth: "540px" }}
+              >
                 I am a web developer and an instructor for programming courses.
                 Currently I focus on building websites with modern
                 human-centered technologies in Vietnam.
@@ -67,6 +75,7 @@ const Banner = (props: Props) => {
                 style={{
                   objectFit: "contain",
                 }}
+                className="animate__slower animate__animated animate__backInRight"
               />
             </div>
             <div className="h-20 w-20 sm:w-28 sm:h-28 lg:h-36 lg:w-36 absolute bottom-5 lg:bottom-0 sm:bottom-8 -left-5 sm:-left-10 -rotate-12">

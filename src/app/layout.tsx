@@ -6,12 +6,13 @@ import { ThemeProvider } from "@/components/ThemeProvider/Theme-provider";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FixedSocial from "@/components/FixedSocial/FixedSocial";
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Quang Khải Portfolio",
-  description: "Đây là portfolio của Quang Khải",
-};
+// export const metadata: Metadata = {
+//   title: "Quang Khải Portfolio",
+//   description: "Đây là portfolio của Quang Khải",
+// };
 
 const calibreFont = localFont({
   src: [
@@ -41,6 +42,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark mdl-js">
+      <head>
+        <meta name="description" content="Đây là portfolio của Quang Khải" />
+        <title>Quang Khải Portfolio</title>
+        <link rel="stylesheet" href="/animate.css" />
+      </head>
       <body className={`${calibreFont.variable}`}>
         <ThemeProvider
           attribute="class"
