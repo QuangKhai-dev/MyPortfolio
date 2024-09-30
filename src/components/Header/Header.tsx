@@ -72,7 +72,7 @@ const Header = (props: Props) => {
               <Image src="/logo-light.png" width={40} height={40} alt="logo" />
             </Link>
           </div>
-          <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 py-3 px-5 nav_layout rounded-3xl">
+          {/* <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 py-3 px-5 nav_layout rounded-3xl">
             <Link
               href="/"
               className="hover:text-yellow-theme transition-colors"
@@ -108,7 +108,7 @@ const Header = (props: Props) => {
             >
               Blog
             </Link>
-          </nav>
+          </nav> */}
           {/* <ToggleChangeTheme /> */}
         </div>
       </div>
