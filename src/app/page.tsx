@@ -1,7 +1,6 @@
+import React from "react";
 import Banner from "@/components/Banner/Banner";
-import Image from "next/image";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import MySkill from "@/components/MySkill/MySkill";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import Working from "@/components/Working/Working";

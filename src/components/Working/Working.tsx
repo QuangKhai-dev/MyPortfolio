@@ -1,6 +1,7 @@
 import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import CarouselExperience from "../Carousel/CarouselExperience";
+import Image from "next/image";
 
 type Props = {};
 
@@ -18,7 +19,13 @@ const Working = (props: Props) => {
   return (
     <section className="pt-10 sm:pt-20 pb-40">
       <div className="arrow_go_down h-40 sm:h-56 lg:h-96 flex justify-center relative">
-        <img src="/arrow_go_down.svg" alt="" className="h-full" />
+        <Image
+          src="/arrow_go_down.svg"
+          width={30}
+          height={300}
+          alt=""
+          className="h-full"
+        />
         <span className="absolute top-1/2 -translate-y-1/2 p-2 bg-[#0b0e17] text-[#4df8ce] text-xl italic">
           Experiences
         </span>

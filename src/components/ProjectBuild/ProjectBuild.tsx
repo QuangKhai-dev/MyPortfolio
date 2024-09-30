@@ -7,7 +7,7 @@ import Image from "next/image";
 type Props = {};
 
 const dataSticky = [
-  <div className="flex space-x-4">
+  <div className="flex space-x-4" key={1}>
     <div className="pr-14">
       <p className="line_sticky_data">CyberSoft</p>
     </div>
@@ -61,7 +61,7 @@ const dataSticky = [
       </ul>
     </div>
   </div>,
-  <div className="flex space-x-4">
+  <div className="flex space-x-4" key={2}>
     <div className="pr-14">
       <p className="line_sticky_data">CyberSoft</p>
     </div>
@@ -73,8 +73,8 @@ const dataSticky = [
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
-          <img
-            src="	https://skillicons.dev/icons?i=react"
+          <Image
+            src="https://skillicons.dev/icons?i=react"
             alt="React"
             className="mr-2"
             width={20}
@@ -83,7 +83,7 @@ const dataSticky = [
           <span>Reactjs</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=tailwind"
             alt="WordPress"
             className="mr-2"
@@ -103,7 +103,7 @@ const dataSticky = [
           <span>Antd</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=redux"
             alt="CSS"
             className="mr-2"
@@ -115,7 +115,7 @@ const dataSticky = [
       </ul>
     </div>
   </div>,
-  <div className="flex space-x-4">
+  <div className="flex space-x-4" key={3}>
     <div className="pr-14">
       <p className="line_sticky_data">TechX</p>
     </div>
@@ -127,7 +127,7 @@ const dataSticky = [
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=nextjs"
             alt="Nestjs"
             className="mr-2"
@@ -137,7 +137,7 @@ const dataSticky = [
           <span>Nextjs</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=tailwind"
             alt="WordPress"
             className="mr-2"
@@ -147,7 +147,7 @@ const dataSticky = [
           <span>TailwindCSS</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=redux"
             alt="CSS"
             className="mr-2"
@@ -159,7 +159,7 @@ const dataSticky = [
       </ul>
     </div>
   </div>,
-  <div className="flex space-x-4">
+  <div className="flex space-x-4" key={4}>
     <div className="pr-14">
       <p className="line_sticky_data">CyberSoft</p>
     </div>
@@ -171,7 +171,7 @@ const dataSticky = [
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
-          <img
+          <Image
             src="	https://skillicons.dev/icons?i=react"
             alt="React"
             className="mr-2"
@@ -181,7 +181,7 @@ const dataSticky = [
           <span>Reactjs</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=tailwind"
             alt="WordPress"
             className="mr-2"
@@ -201,7 +201,7 @@ const dataSticky = [
           <span>Antd</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=redux"
             alt="CSS"
             className="mr-2"
@@ -213,7 +213,7 @@ const dataSticky = [
       </ul>
     </div>
   </div>,
-  <div className="flex space-x-4">
+  <div className="flex space-x-4" key={5}>
     <div className="pr-14">
       <p className="line_sticky_data">TechX</p>
     </div>
@@ -225,7 +225,7 @@ const dataSticky = [
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
-          <img
+          <Image
             src="	https://skillicons.dev/icons?i=react"
             alt="React"
             className="mr-2"
@@ -235,7 +235,7 @@ const dataSticky = [
           <span>Reactjs</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=tailwind"
             alt="WordPress"
             className="mr-2"
@@ -255,7 +255,7 @@ const dataSticky = [
           <span>Antd</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=redux"
             alt="CSS"
             className="mr-2"
@@ -267,7 +267,7 @@ const dataSticky = [
       </ul>
     </div>
   </div>,
-  <div className="flex space-x-4">
+  <div className="flex space-x-4" key={6}>
     <div className="pr-14">
       <p className="line_sticky_data">Freelancer</p>
     </div>
@@ -279,7 +279,7 @@ const dataSticky = [
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=nextjs"
             alt="Nestjs"
             className="mr-2"
@@ -289,7 +289,7 @@ const dataSticky = [
           <span>Nextjs</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=nestjs"
             alt="Nestjs"
             className="mr-2"
@@ -309,7 +309,7 @@ const dataSticky = [
           <span>Antd</span>
         </li>
         <li className="flex items-center">
-          <img
+          <Image
             src="https://skillicons.dev/icons?i=redux"
             alt="CSS"
             className="mr-2"
@@ -408,10 +408,12 @@ const ProjectBuild = (props: Props) => {
                   <p className="text-sm text-gray-400">
                     WordPress - HTML - CSS - JS
                   </p>
-                  <img
+                  <Image
                     src="/icon/right-arrow.svg"
                     className="absolute right-0 top-1/2 -translate-y-1/2 w-3"
                     alt=""
+                    width={12}
+                    height={12}
                   />
                 </div>
                 <div className="project_item_content">
@@ -433,10 +435,12 @@ const ProjectBuild = (props: Props) => {
                   <p className="text-sm text-gray-400">
                     React - Antd - Tailwind - Redux - Formik - HTML - CSS - JS
                   </p>
-                  <img
+                  <Image
                     src="/icon/right-arrow.svg"
                     className="absolute right-0 top-1/2 -translate-y-1/2 w-3"
                     alt=""
+                    width={12}
+                    height={12}
                   />
                 </div>
                 <div className="project_item_content">
@@ -458,10 +462,12 @@ const ProjectBuild = (props: Props) => {
                   <p className="text-sm text-gray-400">
                     NextJS - Tailwind - Redux - Formik - HTML - CSS - JS
                   </p>
-                  <img
+                  <Image
                     src="/icon/right-arrow.svg"
                     className="absolute right-0 top-1/2 -translate-y-1/2 w-3"
                     alt=""
+                    width={12}
+                    height={12}
                   />
                 </div>
                 <div className="project_item_content">
@@ -481,10 +487,12 @@ const ProjectBuild = (props: Props) => {
                   <p className="text-sm text-gray-400">
                     NextJS - Tailwind - Redux - Formik - HTML - CSS - JS
                   </p>
-                  <img
+                  <Image
                     src="/icon/right-arrow.svg"
                     className="absolute right-0 top-1/2 -translate-y-1/2 w-3"
                     alt=""
+                    width={12}
+                    height={12}
                   />
                 </div>
                 <div className="project_item_content">
@@ -500,10 +508,12 @@ const ProjectBuild = (props: Props) => {
                   <p className="text-sm text-gray-400">
                     NextJS - Tailwind - Redux - Formik - HTML - CSS - JS
                   </p>
-                  <img
+                  <Image
                     src="/icon/right-arrow.svg"
                     className="absolute right-0 top-1/2 -translate-y-1/2 w-3"
                     alt=""
+                    width={12}
+                    height={12}
                   />
                 </div>
                 <div className="project_item_content">
@@ -519,10 +529,12 @@ const ProjectBuild = (props: Props) => {
                   <p className="text-sm text-gray-400">
                     NextJS - Tailwind - Redux - Formik - HTML - CSS - JS
                   </p>
-                  <img
+                  <Image
                     src="/icon/right-arrow.svg"
                     className="absolute right-0 top-1/2 -translate-y-1/2 w-3"
                     alt=""
+                    width={12}
+                    height={12}
                   />
                 </div>
                 <div className="project_item_content">
@@ -540,7 +552,13 @@ const ProjectBuild = (props: Props) => {
         </div>
       </div>
       <div className="arrow_go_down h-80 flex justify-center relative">
-        <img src="/arrow_go_down.svg" alt="" className="h-full" />
+        <Image
+          src="/arrow_go_down.svg"
+          width={30}
+          height={300}
+          alt=""
+          className="h-full"
+        />
         <span className="absolute top-1/2 -translate-y-1/2 p-2 bg-[#0b0e17] text-[#4df8ce] text-xl italic">
           Contact Me
         </span>

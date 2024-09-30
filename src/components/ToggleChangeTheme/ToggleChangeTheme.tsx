@@ -15,9 +15,9 @@ import {
 export function ToggleChangeTheme() {
   const { setTheme } = useTheme();
 
-  React.useEffect(() => {
-    setTheme("dark");
-  }, []);
+  // React.useEffect(() => {
+  //   setTheme("dark");
+  // }, []);
 
   return (
     <DropdownMenu>
