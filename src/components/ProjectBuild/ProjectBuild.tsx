@@ -14,7 +14,7 @@ const dataSticky = [
     <div>
       <h3 className="text-xl font-medium mb-3">CyberSoft Landing Page</h3>
       <p className="text-gray-400 w-1/2 mb-3">
-        Build landing pages to promote your company's customers. Use
+        Build landing pages to promote your company&lsquo;s customers. Use
         technologies like WordPress, HTML, CSS,...
       </p>
       <ul className="space-y-3">
@@ -122,8 +122,8 @@ const dataSticky = [
     <div>
       <h3 className="text-xl font-medium mb-3">TechX Landing Page</h3>
       <p className="text-gray-400 w-1/2 mb-3">
-        Build a landing page from scratch for a website promoting your company's
-        new course
+        Build a landing page from scratch for a website promoting your
+        company&lsquo;s new course
       </p>
       <ul className="space-y-3">
         <li className="flex items-center">
@@ -166,7 +166,7 @@ const dataSticky = [
     <div>
       <h3 className="text-xl font-medium mb-3">CRM CyberSoft</h3>
       <p className="text-gray-400 w-1/2 mb-3">
-        Maintain and upgrade some features for CyberSoft company's web
+        Maintain and upgrade some features for CyberSoft company&lsquo;s web
         administration interface
       </p>
       <ul className="space-y-3">
@@ -220,7 +220,7 @@ const dataSticky = [
     <div>
       <h3 className="text-xl font-medium mb-3">CRM TechX</h3>
       <p className="text-gray-400 w-1/2 mb-3">
-        Maintain and upgrade some features for TechX company's web
+        Maintain and upgrade some features for TechX company&lsquo;s web
         administration interface
       </p>
       <ul className="space-y-3">
@@ -326,12 +326,12 @@ const dataSticky = [
 const ProjectBuild = (props: Props) => {
   const stickyDivRef = useRef(null);
   const itemRefs = [
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
   ];
   const [content, setContent] = useState(dataSticky[0]);
   const [flags, setFlags] = useState(Array(itemRefs.length).fill(false));
