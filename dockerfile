@@ -19,7 +19,7 @@ RUN npm run build
 ENV NODE_ENV=production
 
 # Expose port mà ứng dụng sẽ chạy
-EXPOSE 3003
+EXPOSE 8083
 
 # Khởi chạy ứng dụng
 CMD ["npm", "start"]

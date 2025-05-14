@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className={`${calibreFont.variable}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
