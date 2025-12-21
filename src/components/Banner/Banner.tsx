@@ -1,52 +1,54 @@
 import React from "react";
 import personalImage from "./../../assets/img/imageBanner.jpg";
 import Image from "next/image";
+import ColourfulText from "../ui/colourful-text";
+import { TypingAnimation } from "../ui/typing-animation";
+import { RainbowButton } from "../ui/rainbow-button";
+import { FileDown } from "lucide-react";
 
 type Props = {};
 
 const Banner = (props: Props) => {
   return (
-    <section className="banner relative py-10  sm:py-20">
+    <section className="banner relative py-10  sm:py-20 overflow-hidden">
       <div className="container">
         <div className="banner-content block sm:flex items-center gap-10">
           <div className="w-full mb-10 sm:mb-0 sm:w-7/12 lg:w-1/2">
             <div
-              className="fadeup-enter-done"
+              className="fadeup-enter-done mb-3"
               style={{ transitionDelay: "100ms" }}
             >
-              <h1 className="text-light-secondary dark:text-white font-medium mb-5 text-2xl animate__animated animate__backInLeft animate__fast">
+              <TypingAnimation className="text-xl">
                 Hi, my name is
-              </h1>
+              </TypingAnimation>
             </div>
             <div
               className="fadeup-enter-done title_name relative "
-              style={{ transitionDelay: "200ms" }}
+              style={{ transitionDelay: "250ms" }}
             >
-              <h2 className="big-heading relative animate__animated animate__backInLeft animate__slow">
+              <h1 className="big-heading relative animate__animated animate__backInLeft animate__slow">
                 Đỗ Quang Khải.
-              </h2>
-            </div>
-            <div
-              className="fadeup-enter-done"
-              style={{ transitionDelay: "300ms" }}
-            >
-              <h3 className="big-heading animate__animated animate__backInLeft animate__slow">
-                I build things for the web.
-              </h3>
+              </h1>
             </div>
             <div
               className="fadeup-enter-done"
               style={{ transitionDelay: "400ms" }}
             >
               <p
-                className="text-xl animate__slower animate__animated animate__backInLeft"
+                className="text-lg animate__slower animate__animated animate__backInLeft"
                 style={{ maxWidth: "540px" }}
               >
-                I am a web developer and an instructor for programming courses.
-                Currently I focus on building websites with modern
-                human-centered technologies in Vietnam.
+                With experience in web development and UI/UX design, I focus on
+                building user-centered interfaces for real product workflows.
               </p>
             </div>
+            <div className="mt-2">
+              <button className="px-8 py-2 rounded-md bg-[#fbbf24] text-black font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-[#fbbf24] text-upperca flex items-center gap-1">
+                <FileDown fontSize={11} />
+                <span>Dowload CV</span>
+              </button>
+            </div>
+
             {/* <div
               className="fadeup-enter-done"
               style={{ transitionDelay: "500ms" }}
