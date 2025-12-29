@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <section className="contact_me">
       <img src="/shape_about_me_2.svg" alt="" className="relative" />

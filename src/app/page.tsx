@@ -1,7 +1,6 @@
 import React from "react";
 import Banner from "@/components/Banner/Banner";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import MySkill from "@/components/MySkill/MySkill";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import Working from "@/components/Working/Working";
 import ProjectBuild from "@/components/ProjectBuild/ProjectBuild";
@@ -17,7 +16,6 @@ export default function Home() {
       </div>
       <main>
         <Banner />
-        <MySkill />
         <AboutMe />
         <Working />
         <ProjectBuild />

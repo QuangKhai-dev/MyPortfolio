@@ -9,6 +9,12 @@ const nextConfig = {
   server: {
     port: 8083,
   },
+  typescript: {
+    ignoreBuildErrors: false, // Bắt buộc phải fix lỗi TypeScript
+  },
+  eslint: {
+    ignoreDuringBuilds: false, // Bắt buộc phải fix lỗi ESLint
+  },
 };
 
 export default nextConfig;

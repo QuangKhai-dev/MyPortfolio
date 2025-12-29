@@ -1,11 +1,6 @@
 "use client";
 import { BriefcaseBusiness } from "lucide-react";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import { BackgroundGradient } from "./background-gradient";
 
@@ -36,18 +31,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full font-sans md:px-10" ref={containerRef}>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+    <div className="w-full font-sans xl:px-10" ref={containerRef}>
+      <div ref={ref} className="relative max-w-6xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="block xl:flex justify-start pt-16 sm:pt-10 md:pt-40 md:gap-10"
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div className="hidden sticky sm:flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-11 absolute left-3 md:left-3 w-11 bg-white rounded-full flex items-center justify-center">
                 <BriefcaseBusiness color="black" />
               </div>
-              <div className="hidden md:block">
+              <div className="md:hidden block xl:block">
                 <p className="text-xl md:pl-20 md:text-xs font-bold text-neutral-500 dark:text-white/70">
                   {item.time}
                 </p>
@@ -56,7 +51,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </h3>
               </div>
             </div>
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div className="xl:mt-0 -mt-5 xl:pl-0 relative pl-0 sm:pl-20 pr-4 md:pl-20 w-full flex-1">
+              <div className="hidden md:block pb-10 xl:hidden">
+                <p className="text-xl md:text-xs font-bold text-neutral-500 dark:text-white/70">
+                  {item.time}
+                </p>
+                <h3 className="text-xl md:text-3xl font-bold text-[#fbbf24]  dark:text-[#fbbf24] ">
+                  {item.title}
+                </h3>
+              </div>
               <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
                 {item.content}
               </BackgroundGradient>
@@ -67,7 +70,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className="hidden md:block absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
           <motion.div
             style={{
