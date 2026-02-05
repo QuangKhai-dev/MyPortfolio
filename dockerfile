@@ -1,25 +1,32 @@
-FROM node:20.11.0-alpine
+# ========== Stage 1: Build ==========
+FROM node:20-alpine AS builder
 
-# Thiết lập thư mục làm việc trong container
 WORKDIR /app
 
-# Copy file package.json và yarn.lock vào thư mục làm việc
 COPY package*.json ./
+RUN npm ci
 
-# Cài đặt các phụ thuộc
-RUN npm install 
-
-# Copy toàn bộ mã nguồn của dự án vào thư mục làm việc
 COPY . .
-
-# Build dự án NestJS (nếu bạn sử dụng TypeScript)
 RUN npm run build
 
-# Thiết lập biến môi trường (tùy chọn)
-ENV NODE_ENV=production
+# ========== Stage 2: Production (chỉ copy phần cần chạy) ==========
+FROM node:20-alpine AS runner
 
-# Expose port mà ứng dụng sẽ chạy
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV PORT=8083
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Chỉ copy output của standalone build (rất nhỏ)
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 8083
 
-# Khởi chạy ứng dụng
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

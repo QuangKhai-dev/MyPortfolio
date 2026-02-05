@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   images: {
     domains: ["skillicons.dev", "images.unsplash.com"],
     dangerouslyAllowSVG: true, // Cho phép tải hình ảnh SVG

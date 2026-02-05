@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import { ThemeProvider } from "@/components/ThemeProvider/Theme-provider";
+import Header from "@/widget/header/ui";
+import { ThemeProvider } from "@/app/providers/theme-provider";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import FixedSocial from "@/components/FixedSocial/FixedSocial";
+import FixedSocial from "@/widget/fixed-social/ui";
 
 export const metadata: Metadata = {
   title: {
@@ -73,12 +73,21 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "https://quangkhai.dev/favicon.ico",
-    shortcut: "https://quangkhai.dev/favicon.ico",
+    icon: [
+      {
+        url: "/logo-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/logo.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.ico",
     apple: "https://quangkhai.dev/favicon.ico",
   },
-
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.webmanifest",
 };
 
 const calibreFont = localFont({
@@ -100,6 +109,7 @@ const calibreFont = localFont({
     },
   ],
   variable: "--font-calibre",
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -108,7 +118,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark mdl-js">
+    <html lang="vi" className="dark mdl-js">
       <head>
         {/* <meta name="description" content="Đây là portfolio của Quang Khải" /> */}
         {/* <title>Quang Khải Portfolio</title> */}

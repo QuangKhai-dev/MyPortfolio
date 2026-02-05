@@ -1,0 +1,36 @@
+---
+alwaysApply: true
+---
+
+# Tham chiếu .agents/skills trước khi tư vấn
+
+Dự án có thư mục **`.agents/skills/`** chứa bộ skill Vercel (composition patterns, React best practices). Agent **phải** xem qua các tài liệu này trước khi đưa ra lời khuyên về React, Next.js, component, performance hoặc kiến trúc UI.
+
+## Quy tắc bắt buộc
+
+**Trước khi tư vấn hoặc viết code liên quan đến:**
+
+- React components, hooks, state, context
+- Next.js (App Router, data fetching, Server/Client Components)
+- Component architecture, composition, compound components
+- Performance (bundle, re-render, async, caching)
+- Refactoring UI hoặc thiết kế API component
+
+**→ Đọc trước (theo thứ tự ưu tiên):**
+
+1. **`.agents/skills/vercel-composition-patterns/SKILL.md`** — Khi đề cập composition, boolean props, compound components, state trong provider, React 19 (`use()`, ref).
+2. **`.agents/skills/vercel-react-best-practices/SKILL.md`** — Khi đề cập performance, async, bundle, server/client fetching, re-render, rendering.
+3. **`AGENTS.md`** trong từng skill — Khi cần ví dụ chi tiết sai/đúng hoặc refactor phức tạp.
+4. **`.agents/skills/<skill>/rules/*.md`** — Khi cần rule cụ thể (ví dụ `async-parallel`, `architecture-avoid-boolean-props`).
+
+## Đường dẫn trong project
+
+- Composition patterns: `.agents/skills/vercel-composition-patterns/`
+- React best practices: `.agents/skills/vercel-react-best-practices/`
+- Web design (nếu có): `.agents/skills/web-design-guidelines/`
+
+## Áp dụng
+
+- Khi user hỏi về React/Next.js/performance/composition: đọc `SKILL.md` (và nếu cần `AGENTS.md` hoặc rule cụ thể) của skill liên quan **trước** rồi mới trả lời hoặc đề xuất code.
+- Đề xuất code phải tuân theo hướng dẫn trong skill (ví dụ: tránh boolean props, dùng compound components, async parallel, bundle tránh barrel imports).
+- Nếu skill và FSD rules (trong `.cursor/rules/`) đụng độ, ưu tiên FSD cho cấu trúc layer/slice; ưu tiên skill Vercel cho patterns component và performance.
